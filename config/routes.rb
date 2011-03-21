@@ -1,8 +1,4 @@
 TaggingTut::Application.routes.draw do
-  get "images/index"
-  post "images/tag"
-  match "images/tag_suggestions/:text" => "images#tag_suggestions"
-  get "pets/index"
   root :to => "images#index"
 
   # The priority is based upon order of creation:
