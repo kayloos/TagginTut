@@ -1,0 +1,21 @@
+<h1>Images of my pets</h1>
+<ul style="list-style: none;">
+  <% @images.each do |i| %>
+    <li style="margin: 0 5px 10px 5px; padding: 0; float:left;">
+    <%= image_tag "/images/#{i.filename}.jpg", :class => "image" %>
+      <div style="width:280px; height:40px; background: #CCC; margin: 0; padding: 10px;" class="caption">
+        <%= form_tag "images/tag", :class => "tag_form", :remote => true do %>
+          <%= hidden_field_tag "image_id", i.id %>
+          <%= submit_tag "Tag", :style => "float:right;" %>
+          <%= text_field_tag "tag", "", :class => "text #{i.id}", :style => "float:right; width:80px;" %>
+        <% end %>
+        <strong>In picture:</strong>
+        <div class="name_list <%= i.id %>" style="display:inline;">
+          <% i.pet_list.each do |p| %>
+            <%= p %><%= ", " unless p == i.pet_list.last %>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,8 @@
+<% if @suggestions.any? %>
+  <div id="suggestions">
+    <% @suggestions.each do |s| %>
+      <%= link_to s.name, "",:class => "add_tag" %>
+      <%= raw"<br />" unless s == @suggestions.last %>
+    <% end %>
+  </div>
+<% end %>
