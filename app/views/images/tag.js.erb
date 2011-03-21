@@ -1,5 +1,0 @@
-var name_list = $(".name_list.<%= @image_id %>");
-var name_list_html = name_list.html().trim();
-var separator = (name_list_html == "" ? "" : ", ");
-name_list.text(name_list_html + separator + "<%= @name %>");
-$(".text.<%= @image_id %>").val("");
