@@ -10,9 +10,29 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+#image_list {
+  list-style:none;
+}
+.image_elem { 
+  margin: 0 5px 10px 5px;
+  padding: 0;
+  float:left;
+}
 .caption {
   z-index: 5;
   position:relative;
+  width:280px;
+  height:40px;
+  background: #CCC;
+  margin: 0; 
+  padding: 10px;
+}
+.text {
+  float: right;
+  width: 80px;
+}
+.name_list {
+  display: inline;
 }
 .image {
   margin:0;
