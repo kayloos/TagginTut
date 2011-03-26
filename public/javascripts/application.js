@@ -24,8 +24,7 @@ $(function() {
         });
       }
     }
-    else
-      $("#suggestions").remove();
+    else $("#suggestions").remove();
   });
   $(document).click(function(){
     if($("#suggestions") != undefined) $("#suggestions").remove();
